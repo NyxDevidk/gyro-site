@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GyroClient — Minecraft 1.8.9 client for Windows</title>
+<meta name="description" content="GyroClient is a fast, clean client for Minecraft 1.8.9 on Windows. Modules, a modern menu, and a one-click loader.">
+<meta name="theme-color" content="#0B0B10">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top" aria-label="GyroClient home">
+      <img src="assets/logo.png" alt="" width="32" height="32" class="brand__logo">
+      <span>GyroClient</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary btn--sm" href="#" data-download>Download</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="aurora" aria-hidden="true">
+      <div class="aurora__layer aurora__layer--a"></div>
+      <div class="aurora__layer aurora__layer--b"></div>
+    </div>
+    <div class="hero__vignette" aria-hidden="true"></div>
+    <div class="wrap hero__content">
+      <img src="assets/logo.png" alt="GyroClient logo" width="96" height="96" class="hero__logo">
+      <h1 id="hero-title" class="hero__title" data-reveal>GyroClient</h1>
+      <p class="hero__sub">A fast, clean client for Minecraft 1.8.9. Modules, a modern menu, one-click loader.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" id="download" href="#" data-download>Download for Windows</a>
+        <a class="btn btn--ghost" href="#features">See features</a>
+      </div>
+      <p class="release" id="release-info" aria-live="polite">
+        <span data-field="version"></span>
+        <span data-field="size"></span>
+        <span class="release__hash" data-field="sha256">
+          <span class="release__label">SHA-256</span>
+          <code id="sha-value"></code>
+          <button type="button" class="copy" id="copy-sha" aria-label="Copy SHA-256 checksum">Copy</button>
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="features" aria-labelledby="features-title">
+    <div class="wrap">
+      <p class="eyebrow">Features</p>
+      <h2 id="features-title">Modules, grouped the way you use them</h2>
+      <ul class="cards">
+        <li class="card">
+          <h3>Combat</h3>
+          <ul class="mods"><li>KillAura</li><li>AutoClicker</li><li>AimAssist</li><li>Velocity</li></ul>
+        </li>
+        <li class="card">
+          <h3>Movement</h3>
+          <ul class="mods"><li>Scaffold</li><li>BridgeAssist</li><li>Speed</li></ul>
+        </li>
+        <li class="card">
+          <h3>Player</h3>
+          <ul class="mods"><li>Clutch</li><li>AutoTool</li><li>FakeLag</li></ul>
+        </li>
+        <li class="card">
+          <h3>Render</h3>
+          <ul class="mods"><li>ESP</li><li>Chams</li><li>TargetHUD</li></ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="menu" aria-labelledby="menu-title">
+    <div class="wrap">
+      <p class="eyebrow">Menu</p>
+      <h2 id="menu-title">One menu for every module</h2>
+      <figure class="shot">
+        <div class="shot__frame">
+          <img src="assets/menu.png" alt="GyroClient in-game menu showing module categories and settings" width="1600" height="900" loading="lazy" decoding="async">
+          <span class="shot__placeholder" aria-hidden="true">assets/menu.png — menu screenshot</span>
+        </div>
+        <figcaption><kbd>RSHIFT</kbd> opens the menu</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2 id="how-title">Three steps</h2>
+      <ol class="steps">
+        <li class="step"><span class="step__n" aria-hidden="true">1</span><p>Start Minecraft 1.8.9</p></li>
+        <li class="step"><span class="step__n" aria-hidden="true">2</span><p>Run <code>GyroLoader.exe</code></p></li>
+        <li class="step"><span class="step__n" aria-hidden="true">3</span><p>Press <kbd>RSHIFT</kbd> in game</p></li>
+      </ol>
+      <p class="note">Press <kbd>END</kbd> to unload the client. The loader updates itself.</p>
+    </div>
+  </section>
+
+  <section class="section" id="requirements" aria-labelledby="req-title">
+    <div class="wrap">
+      <p class="eyebrow">Requirements</p>
+      <h2 id="req-title">What you need</h2>
+      <dl class="reqs">
+        <div class="req"><dt>OS</dt><dd>Windows 10/11 x64</dd></div>
+        <div class="req"><dt>Java</dt><dd>Java 8 x64</dd></div>
+        <div class="req"><dt>Minecraft</dt><dd>1.8.9 (Vanilla, Forge or Lunar)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-title">Questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Why does my antivirus flag it?</summary>
+          <p>The loader injects a DLL into the game process, and the files are not code-signed. Antivirus software often flags that behaviour, so false positives are possible. Before running it, compare the file's SHA-256 with the checksum shown on this page.</p>
+        </details>
+        <details>
+          <summary>Is it safe for servers?</summary>
+          <p>Using it may be against a server's rules. Check the rules of any server you join. Use at your own risk.</p>
+        </details>
+        <details>
+          <summary>How do I update?</summary>
+          <p>The loader updates automatically when you run it.</p>
+        </details>
+        <details>
+          <summary>How do I uninstall?</summary>
+          <p>Press <kbd>END</kbd> in game to unload the client, then delete <code>GyroLoader.exe</code>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a class="brand" href="#top" aria-label="GyroClient, back to top">
+      <img src="assets/logo.png" alt="" width="28" height="28" class="brand__logo">
+      <span>GyroClient</span>
+    </a>
+    <ul class="footer__links">
+      <li><a id="discord-link" href="#" rel="noopener noreferrer" target="_blank">Discord</a></li>
+      <li><a id="github-link" href="#" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+    </ul>
+    <p class="footer__legal">Not affiliated with Mojang or Microsoft.</p>
+  </div>
+</footer>
+</body>
+</html>
